@@ -10,6 +10,13 @@ class CommentSection extends Component {
             newComments: ''
         }
     };
+
+    componentDidMount(){
+        
+        this.setState({
+            comments:  // ..
+        });
+    }
 }
 
 //input tag
