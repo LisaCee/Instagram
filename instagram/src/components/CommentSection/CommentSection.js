@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
 
+class CommentSection extends Component {
+    constructor(){
+        super();
+        this.state = {
+            comments: [],
+            newComments: ''
+        }
+    };
+}
 
+//input tag
 
+// component DidMount
 
+//store in state 
+
+// add comment to state upon mounting. 
 export default CommentSection;
 
 
