@@ -13,9 +13,9 @@ class CommentSection extends Component {
 
     componentDidMount(){
         
-        this.setState({
-            comments:  // ..
-        });
+        // this.setState({
+        //     comments:  // ..
+        // });
     }
 }
 
