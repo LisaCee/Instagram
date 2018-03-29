@@ -13,7 +13,7 @@ class CommentSection extends Component {
 
     componentDidMount(){
         this.setState({
-            comments: this.props.comments,
+            // comments: this.props.comments,
         });
     }
 
@@ -35,6 +35,7 @@ class CommentSection extends Component {
         return(
             <div>
                 {this.state.comments.map(comment => <div>{comment}</div>)}
+                
                 <form onSubmit = {this.addComment}>
                     <input 
                         type = "text"
