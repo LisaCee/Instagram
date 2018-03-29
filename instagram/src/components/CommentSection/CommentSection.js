@@ -7,16 +7,45 @@ class CommentSection extends Component {
         super();
         this.state = {
             comments: [],
-            newComments: ''
+            newComment: ''
         }
     };
 
     componentDidMount(){
-        
-        // this.setState({
-        //     comments:  // ..
-        // });
+        this.setState({
+            comments: this.props.comments,
+        });
     }
+
+    addComment = event => {
+        event.preventDefault();
+        const comments = this.state.comments;
+        comments.push(this.state.newComment);
+        this.setState({
+            newComment: "",
+            comments: comments
+        });
+    }
+
+    addNewCommentInput = event => {
+        this.setState({ newComment: event.target.value});
+    }
+
+    render() {
+        return(
+            <div>
+                {this.state.comments.map(comment => <div>{comment}</div>)}
+                <form onSubmit = {this.addComment}>
+                    <input 
+                        type = "text"
+                        onChange = {this.addNewCommentInput}
+                        placeholder = "Add a comment..."
+                        value = {this.state.newComment}
+                    />
+                </form>        
+            </div>
+        );
+    }    
 }
 
 //input tag
