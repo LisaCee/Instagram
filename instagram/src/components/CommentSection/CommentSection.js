@@ -8,22 +8,28 @@ class CommentSection extends Component {
         this.state = {
             comments: [],
             newComment: ''
-        }
-    };
+        };
+    }
 
     componentDidMount(){
+        console.log(this.props.comments);
         this.setState({
-            // comments: this.props.comments,
+            comments: this.props.comments
         });
     }
 
     addComment = event => {
         event.preventDefault();
-        const comments = this.state.comments;
-        comments.push(this.state.newComment);
+        const newUser = {
+            username: 'Lisa and Stephanie',
+            text: this.state.newComment
+        };
+        
+        const commentsArray = this.state.comments;
+        commentsArray.push(newUser);
         this.setState({
-            newComment: "",
-            comments: comments
+            comments: commentsArray,
+            newComment: ""
         });
     }
 

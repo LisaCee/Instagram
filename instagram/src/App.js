@@ -9,9 +9,9 @@ import PostContainer from './components/CommentSection/CommentSection';
 const App = () => { 
     return <div className="App">
         {/* <SearchBar /> */}
-        {dummyData.map((post, i) => (
-          <PostContainer postData={post} key={i} />
-        ))}
+        {dummyData.map((post, i) => 
+          <PostContainer key={i} postData={post} />
+        )}
         {/* <CommentSection /> */}
       </div>;
       
