@@ -7,13 +7,14 @@ import './App.css';
 import CommentSection from './components/CommentSection/CommentSection';
 
 const App = () => { 
-  return(
-      <div className="App">
-      {/* <SearchBar/>
-      <PostContainer/>      */}
-      <CommentSection />
-      </div>
-    );
+    return <div className="App">
+        {/* <SearchBar />
+        {dummyData.map((post, i) => (
+          <PostContainer postData={post} key={i} />
+        ))} */}
+        <CommentSection />
+      </div>;
+      
   }
 
 

@@ -33,10 +33,14 @@ class CommentSection extends Component {
 
     render() {
         return(
-            <div>
-                {this.state.comments.map(comment => <div>{comment}</div>)}
-                
-                <form onSubmit = {this.addComment}>
+            <div className= "comment-section">
+                {this.state.comments ? this.state.comments.map((comment, i) => (
+                    <div className="index" key={i}>
+                    <div className= "comment-username">{comment.username}</div>
+                    <div className= "comment-text">{comment.text}</div>
+                    </div>)
+                ) : null}  {/*if there are comments - yes, if not -no*/}         
+                <form className="inputField" onSubmit = {this.addComment}>
                     <input 
                         type = "text"
                         onChange = {this.addNewCommentInput}
