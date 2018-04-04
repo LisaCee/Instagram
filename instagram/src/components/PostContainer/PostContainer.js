@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
+import { Container, Row, Col } from 'reactstrap';
 
 class PostContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
             liked: false,
-            likes: this.props.post.likes 
+            likes: this.props.post.likes, 
         }
     }
 
@@ -17,30 +19,30 @@ class PostContainer extends Component {
     }
     clickLike = (e) => {
         this.setState({liked: !this.state.liked});
-        this.incrementLike()
+        this.incrementLike();
     }
 
     render() {
     return (
-        <div className='postContainer'>
-            <div className='thumbnail'>
-                <img src={this.props.post.thumbnailUrl}/>
-                <span>{this.props.post.username}</span>
-            </div>
-            <div className='postImage'>
-                <img src={this.props.post.imageUrl} />
-            </div>
-            <div className='likes' onClick={this.clickLike}><i class="far fa-heart"></i>{this.state.likes}</div> 
-            <CommentSection comments={this.props.post.comments}/>
-        </div>
+        <Container>
+            <div className='postContainer'>
+                <Row className='header'>
+                    <img className='thumbnail' src={this.props.post.thumbnailUrl}/>
+                    <span>{this.props.post.username}</span>
+                </Row>
+                <Row>
+                    <div className='postImage'>
+                        <img src={this.props.post.imageUrl} />
+                    </div>
+                </Row>
+                <Row>
+                    <div className='likes' onClick={this.clickLike}><i class="far fa-heart"></i>{this.state.likes}</div> 
+                </Row>
+                </div>
+                
+                <CommentSection comments={this.props.post.comments}/>
+        </Container>
     ) 
- }   
+    }   
  }
 export default PostContainer;
-
-
-// Each PostContainer component will then pass the array of comments on 
-// each post object as a prop to an instance of the CommentSection component.
-
-
-//two image tags

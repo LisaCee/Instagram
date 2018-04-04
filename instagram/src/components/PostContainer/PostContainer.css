@@ -1,0 +1,8 @@
+.thumbnail {
+    border-radius: 100%;
+}
+
+.postImage {
+    width: 100%;
+    max-width: 300px;
+}
