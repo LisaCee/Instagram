@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
-const PostContainer = ({postData}) => {
+class PostContainer extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            liked: false,
+            likes: this.props.post.likes 
+        }
+    }
+
+    incrementLike = () => {
+        let likes = this.state.likes;
+        (this.state.liked ? likes-- : likes++);
+        this.setState({likes});
+    }
+    clickLike = (e) => {
+        this.setState({liked: !this.state.liked});
+        this.incrementLike()
+    }
+
+    render() {
     return (
         <div className='postContainer'>
             <div className='thumbnail'>
-                <img src={postData.thumbnailUrl}/>
-                <span>{postData.username}</span>
+                <img src={this.props.post.thumbnailUrl}/>
+                <span>{this.props.post.username}</span>
             </div>
             <div className='postImage'>
-                <img src={postData.imageUrl} />
+                <img src={this.props.post.imageUrl} />
             </div>
-            <CommentSection comments={postData.comments}/>
+            <div className='likes' onClick={this.clickLike}><i class="far fa-heart"></i>{this.state.likes}</div> 
+            <CommentSection comments={this.props.post.comments}/>
         </div>
     ) 
+ }   
  }
 export default PostContainer;
 

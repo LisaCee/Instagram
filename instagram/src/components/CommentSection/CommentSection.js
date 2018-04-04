@@ -1,51 +1,54 @@
-import React, {Component} from 'react';
-
-
+import React, { Component } from 'react';
 
 class CommentSection extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             comments: [],
             newComment: ''
-        };
+        }
     }
 
     componentDidMount(){
-        console.log(this.props.comments);
         this.setState({
-            comments: this.props.comments
+            comments: this.props.comments,
+            newComment: ''
         });
     }
 
-    addComment = event => {
-        event.preventDefault();
-        const newUser = {
+    addComment = (e) => {
+        e.preventDefault();
+        const comments = this.state.comments;
+        const newComment = {
             username: 'Lisa and Stephanie',
-            text: this.state.newComment
+            text: this.state.newComment,
         };
-        
-        const commentsArray = this.state.comments;
-        commentsArray.push(newUser);
+        comments.push(newComment);
         this.setState({
-            comments: commentsArray,
+            comments: comments,
             newComment: ""
         });
     }
 
-    addNewCommentInput = event => {
-        this.setState({ newComment: event.target.value});
+    addNewCommentInput =(e) => {
+        const newComment = e.target.value;
+        this.setState({ 
+            newComment: newComment
+        });
     }
 
     render() {
         return(
             <div className= "comment-section">
-                {this.state.comments ? this.state.comments.map((comment, i) => (
+               {this.state.comments.map((comment, i) => {
+                    return (
                     <div className="index" key={i}>
-                    <div className= "comment-username">{comment.username}</div>
-                    <div className= "comment-text">{comment.text}</div>
-                    </div>)
-                ) : null}  {/*if there are comments - yes, if not -no*/}         
+                        <div className= "comment-username">{comment.username}</div>
+                        <div className= "comment-text">{comment.text}</div>
+                    </div>
+                    )
+               })} 
+
                 <form className="inputField" onSubmit = {this.addComment}>
                     <input 
                         type = "text"

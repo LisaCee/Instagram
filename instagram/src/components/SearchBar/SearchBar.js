@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default SearchBar;
+// export default SearchBar;
 
 
 
