@@ -24,22 +24,34 @@ class PostContainer extends Component {
 
     render() {
     return (
-        <Container>
+        <Container className='container'>
             <div className='postContainer'>
                 <Row className='header'>
+                    <Col xs="2">
                     <img className='thumbnail' src={this.props.post.thumbnailUrl}/>
-                    <span>{this.props.post.username}</span>
+                    </Col>
+                    <span className='username'>{this.props.post.username}</span>
                 </Row>
                 <Row>
                     <div className='postImage'>
-                        <img src={this.props.post.imageUrl} />
+                        <img className='postImage' src={this.props.post.imageUrl} />
                     </div>
                 </Row>
                 <Row>
-                    <div className='likes' onClick={this.clickLike}><i class="far fa-heart"></i>{this.state.likes}</div> 
+                    <div className='likes' onClick={this.clickLike}>
+                        <i class="far fa-heart"></i>
+                    </div> 
+                    <div className='comment'>
+                        <i class="far fa-comment"></i>
+                    </div>
+                </Row>
+                <Row>
+                    <div className='likeNum'>
+                        {this.state.likes}
+                    </div>    
                 </Row>
                 </div>
-                
+
                 <CommentSection comments={this.props.post.comments}/>
         </Container>
     ) 
