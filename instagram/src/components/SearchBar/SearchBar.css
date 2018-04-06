@@ -2,17 +2,25 @@
     margin: 0 auto;
     padding: 1%;
 }
-
-.svg-inline--fa.fa-w-16 {
+.svg-inline--fa.fa-lg {
     margin: 1%;
 }
-
-.svg-inline--fa.fa-lg {
-  margin: 1%;
+.pipe {
+    font-size: 1.5rem;
 }
-
+.name {
+    margin-top: 5px;
+}
 input {
     text-align: center;
     height: 25px;
     margin: 1%;
+    margin-top: 5px;
+}
+.inputWithData {
+    margin-top: -50px;
+}
+.svg-inline--fa.fa-w-16 {
+    margin: 1%;
+    margin-top: 10px;
 }
