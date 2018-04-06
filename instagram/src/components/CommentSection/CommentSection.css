@@ -1,3 +1,14 @@
+.comment-section {
+    font-size: smaller;
+    padding: 1%;
+}
+
 .comment-username {
     font-weight: bold;
+}
+
+.inputField input {
+    width: 350px;
+    padding: 1%;
+    font-size: smaller;
 }

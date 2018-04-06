@@ -2,6 +2,7 @@
     border-radius: 100%;
     height: 30px;
     margin-top: 10px;
+    padding: 1%;
 }
 .username {
     font-weight: bold;
@@ -14,7 +15,6 @@
     padding-top: 1%;
     margin: 0 auto;
 }
-
 .container {
     border: 1px solid grey;
     border-radius: 10px;
@@ -22,15 +22,20 @@
     max-width: 400px;
     margin: 1%;
 }
-
 .name {
     height: 30px;
 }
-
-.container .svg-inline--fa.fa-w-16 {
+.icons {
     margin-left: 10px;
+}
+.likeNum {
+    margin-left: 10px;
+}
+.container .svg-inline--fa.fa-w-16 {
+
+    border: 1px solid black;
 }
 
 .likeNum {
-    margin-left: 10px;
+    margin-left: 17px;
 }

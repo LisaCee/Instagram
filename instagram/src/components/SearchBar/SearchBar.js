@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row } from 'reactstrap';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -16,18 +16,17 @@ class SearchBar extends Component {
     render() {
         return (
                 <Row className='search'>
-                    <i class="fab fa-instagram fa-lg"></i> 
+                    <i className="fab fa-instagram fa-lg"></i> 
                     <div className='pipe'>|</div>
                     <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/640px-Instagram_logo.svg.png' alt='Instagram name in cursive' className='name'/>
 
                     <div className='inputWithIcon'>
-                        <input type='text' placeholder='Search' />
-                        <span><i class="fab fa-instagram fa-lg"></i> </span>    
+                        <input type='text' placeholder='Search' />    
                     </div>
 
-                    <i class="far fa-compass"></i>
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-user"></i>
+                    <i className="far fa-compass"></i>
+                    <i className="far fa-heart"></i>
+                    <i className="far fa-user"></i>
                 </Row>
         )
     }

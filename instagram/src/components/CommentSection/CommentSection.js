@@ -21,7 +21,7 @@ class CommentSection extends Component {
         e.preventDefault();
         const comments = this.state.comments;
         const newComment = {
-            username: 'Lisa and Stephanie',
+            username: 'LisaCee',
             text: this.state.newComment,
         };
         comments.push(newComment);

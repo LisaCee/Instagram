@@ -28,26 +28,26 @@ class PostContainer extends Component {
             <div className='postContainer'>
                 <Row className='header'>
                     <Col xs="2">
-                    <img className='thumbnail' src={this.props.post.thumbnailUrl}/>
+                    <img className='thumbnail' alt='thumbnail' src={this.props.post.thumbnailUrl}/>
                     </Col>
                     <span className='username'>{this.props.post.username}</span>
                 </Row>
                 <Row>
                     <div className='postImage'>
-                        <img className='postImage' src={this.props.post.imageUrl} />
+                        <img className='postImage' alt='post' src={this.props.post.imageUrl} />
                     </div>
                 </Row>
-                <Row>
-                    <div className='likes' onClick={this.clickLike}>
-                        <i class="far fa-heart"></i>
+                <Row className='icons'>
+                    <div className='likes' onClick={this.clickLike} >
+                        <i className="far fa-heart"></i>
                     </div> 
                     <div className='comment'>
-                        <i class="far fa-comment"></i>
+                        <i className="far fa-comment"></i>
                     </div>
                 </Row>
                 <Row>
                     <div className='likeNum'>
-                        {this.state.likes}
+                        {this.state.likes} likes
                     </div>    
                 </Row>
                 </div>
