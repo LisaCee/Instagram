@@ -6,12 +6,13 @@
 }
 .username {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 15px;
+    margin-left: -15px;
 }
 .postImage {
-    height: 380px;
-    width: 380px;
+    height: 400px;
+    width: 395px;
     padding-top: 1%;
     margin: 0 auto;
 }
@@ -32,10 +33,14 @@
     margin-left: 10px;
 }
 .container .svg-inline--fa.fa-w-16 {
-
-    border: 1px solid black;
+   height: 1.5rem; 
+   margin-right: 20px;
+   margin-left: -5px;
 }
 
 .likeNum {
+    margin-top: 3px;
     margin-left: 17px;
+    font-weight: bold;
+    font-size: 14px;
 }

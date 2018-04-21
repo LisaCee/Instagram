@@ -6,7 +6,8 @@ class CommentSection extends Component {
         super(props);
         this.state = {
             comments: [],
-            newComment: ''
+            newComment: '',
+            timestamp: []
         }
     }
 
@@ -39,6 +40,7 @@ class CommentSection extends Component {
     }
 
     render() {
+        console.log(this.state);
         return(
             <div className= "comment-section">
                {this.state.comments.map((comment, i) => {
@@ -49,7 +51,17 @@ class CommentSection extends Component {
                     </div>
                     )
                })} 
-
+                <div className='timestamp'>
+                    {this.state.timestamp.map((timestamp, i) => {
+                        return (
+                            <div className='index' key={i}>
+                                <div className='comment-timestamp'>
+                                    {this.state.timestamp}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
                 <form className="inputField" onSubmit = {this.addComment}>
                     <input 
                         type = "text"

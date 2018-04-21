@@ -39,10 +39,10 @@ class PostContainer extends Component {
                 </Row>
                 <Row className='icons'>
                     <div className='likes' onClick={this.clickLike} >
-                        <i className="far fa-heart"></i>
+                        <i className="far fa-lg fa-heart"></i>
                     </div> 
                     <div className='comment'>
-                        <i className="far fa-comment"></i>
+                        <i className="far fa-lg fa-comment fa-flip-horizontal"></i>
                     </div>
                 </Row>
                 <Row>

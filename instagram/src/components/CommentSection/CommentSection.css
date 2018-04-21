@@ -2,11 +2,17 @@
     font-size: smaller;
     padding: 1%;
 }
-
+.timestamp {
+    height: 20px;
+}
 .comment-username {
     font-weight: bold;
+    display: inline;
+    margin-right: 4px;
 }
-
+.comment-text {
+    display: inline;
+}
 .inputField input {
     width: 350px;
     padding: 1%;
